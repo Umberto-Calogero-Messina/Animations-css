@@ -41,7 +41,7 @@ body {
   }
 
   to {
-    scale: 1.8;
+    scale: 1.5;
   }
 }
 
@@ -147,83 +147,6 @@ body {
     height: 10px;
     border-radius: 4px;
   }
-
-  // generar en bucle el html
-  // generar el top, bgc random
-
-  // element.style.top left ecc ecc
-
-  // &__line1 {
-  //   top: 50px;
-  //   background-color: rgb(253, 146, 75);
-  //   animation: writing-line1 0.5s 3s linear forwards;
-  // }
-
-  // &__line2 {
-  //   top: 70px;
-  //   background-color: rgb(255, 125, 39);
-  //   animation: writing-line2 0.5s 3.5s linear forwards;
-  // }
-
-  // &__line3 {
-  //   top: 90px;
-  //   background-color: rgb(207, 95, 20);
-  //   animation: writing-line3 0.5s 4s linear forwards;
-  // }
-
-  // &__line4 {
-  //   top: 110px;
-  //   background-color: rgb(179, 71, 0);
-  //   animation: writing-line4 0.5s 4.5s linear forwards;
-  // }
-
-  // &__line5 {
-  //   top: 130px;
-  //   background-color: rgba(202, 86, 9);
-  //   animation: writing-line5 0.5s 5s linear forwards;
-  // }
-
-  // &__line6 {
-  //   top: 150px;
-  //  background-color: rgb(255, 150, 80);
-  //   animation: writing-line6 0.5s 5.5s linear forwards;
-  // }
-
-  // &__line7 {
-  //   top: 170px;
-  //   background-color: rgb(255, 102, 0);
-  //   animation: writing-line7 0.5s 6s linear forwards;
-  // }
-
-  // &__line8 {
-  //   top: 190px;
-  //   background-color: rgb(226, 103, 20);
-  //   animation: writing-line8 0.5s 6.5s linear forwards;
-  // }
-
-  // &__line9 {
-  //   top: 210px;
-  //   background-color: rgb(168, 69, 3);
-  //   animation: writing-line9 0.5s 7s linear forwards;
-  // }
-
-  // &__line10 {
-  //   top: 230px;
-  //   background-color: rgb(255, 125, 39);
-  //   animation: writing-line10 0.5s 7.5s linear forwards;
-  // }
-
-  // &__line11 {
-  //   top: 250px;
-  //   background-color: #f60;
-  //   animation: writing-line11 0.5s 8s linear forwards;
-  // }
-
-  // &__line12 {
-  //   top: 270px;
-  //   background-color: #f60;
-  //   animation: writing-line12 0.5s 8.5s linear forwards;
-  // }
 }
 
 @keyframes tablet-scale {
