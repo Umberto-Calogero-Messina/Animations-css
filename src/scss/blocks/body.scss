@@ -1,6 +1,367 @@
+@use '../mixins/pseudo.scss' as *;
 html {
   scroll-behavior: smooth;
 }
 body {
   font-family: sans-serif;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heart {
+  position: relative;
+  width: 400px;
+  height: 360px;
+  animation: heart 0.8s infinite alternate;
+}
+
+.heart:after,
+.heart:before {
+  @include pseudo(200px, 325px) {
+    left: 200px;
+    background: red;
+    border-radius: 200px 200px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+}
+
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+@keyframes heart {
+  from {
+    scale: 1;
+  }
+
+  to {
+    scale: 1.8;
+  }
+}
+
+.guybrush {
+  &__sky {
+    background-image: url(./assets/images/monkey-sky.png);
+    animation: animateBg 7s infinite linear;
+  }
+
+  &__sea {
+    position: relative;
+    top: 150px;
+    background-image: url(./assets/images/monkey-sea.png);
+    animation: animateBg 5s infinite linear;
+  }
+
+  &__player {
+    width: 104px;
+    height: 150px;
+    margin-inline: auto;
+    position: relative;
+    bottom: 30px;
+    background-image: url(./assets/images/monkey-guybrush.png);
+    animation: guybrushWalk 1s steps(6) infinite;
+  }
+}
+
+@keyframes animateBg {
+  0% {
+    background-position: 550px;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+@keyframes guybrushWalk {
+  0% {
+    background-position: 624px;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+.tablet {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  border-radius: 8px;
+  border: 1px solid #7a45f7;
+  animation: tablet-scale 0.5s 1s forwards;
+  scale: 0;
+  overflow: hidden;
+
+  &__header {
+    width: 0;
+    height: 30px;
+    background-color: #666;
+
+    animation: tablet-header 0.5s 2s forwards;
+  }
+
+  &__redCircle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    animation: tablet-scale 0.3s 2.3s forwards;
+    scale: 0;
+  }
+
+  &__yellowCircle {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(255, 153, 0);
+    animation: tablet-scale 0.3s 2.6s forwards;
+    scale: 0;
+  }
+
+  &__greenCircle {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(1, 185, 1);
+    animation: tablet-scale 0.3s 2.9s forwards;
+    scale: 0;
+  }
+
+  &__line {
+    position: absolute;
+    left: 15px;
+    height: 10px;
+    border-radius: 4px;
+  }
+
+  // generar en bucle el html
+  // generar el top, bgc random
+
+  // element.style.top left ecc ecc
+
+  // &__line1 {
+  //   top: 50px;
+  //   background-color: rgb(253, 146, 75);
+  //   animation: writing-line1 0.5s 3s linear forwards;
+  // }
+
+  // &__line2 {
+  //   top: 70px;
+  //   background-color: rgb(255, 125, 39);
+  //   animation: writing-line2 0.5s 3.5s linear forwards;
+  // }
+
+  // &__line3 {
+  //   top: 90px;
+  //   background-color: rgb(207, 95, 20);
+  //   animation: writing-line3 0.5s 4s linear forwards;
+  // }
+
+  // &__line4 {
+  //   top: 110px;
+  //   background-color: rgb(179, 71, 0);
+  //   animation: writing-line4 0.5s 4.5s linear forwards;
+  // }
+
+  // &__line5 {
+  //   top: 130px;
+  //   background-color: rgba(202, 86, 9);
+  //   animation: writing-line5 0.5s 5s linear forwards;
+  // }
+
+  // &__line6 {
+  //   top: 150px;
+  //  background-color: rgb(255, 150, 80);
+  //   animation: writing-line6 0.5s 5.5s linear forwards;
+  // }
+
+  // &__line7 {
+  //   top: 170px;
+  //   background-color: rgb(255, 102, 0);
+  //   animation: writing-line7 0.5s 6s linear forwards;
+  // }
+
+  // &__line8 {
+  //   top: 190px;
+  //   background-color: rgb(226, 103, 20);
+  //   animation: writing-line8 0.5s 6.5s linear forwards;
+  // }
+
+  // &__line9 {
+  //   top: 210px;
+  //   background-color: rgb(168, 69, 3);
+  //   animation: writing-line9 0.5s 7s linear forwards;
+  // }
+
+  // &__line10 {
+  //   top: 230px;
+  //   background-color: rgb(255, 125, 39);
+  //   animation: writing-line10 0.5s 7.5s linear forwards;
+  // }
+
+  // &__line11 {
+  //   top: 250px;
+  //   background-color: #f60;
+  //   animation: writing-line11 0.5s 8s linear forwards;
+  // }
+
+  // &__line12 {
+  //   top: 270px;
+  //   background-color: #f60;
+  //   animation: writing-line12 0.5s 8.5s linear forwards;
+  // }
+}
+
+@keyframes tablet-scale {
+  0% {
+    scale: 0;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes tablet-header {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes writing-line1 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes writing-line2 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes writing-line3 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes writing-line4 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 65%;
+  }
+}
+
+@keyframes writing-line5 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 55%;
+  }
+}
+
+@keyframes writing-line6 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes writing-line7 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 40%;
+  }
+}
+
+@keyframes writing-line8 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 75%;
+  }
+}
+
+@keyframes writing-line9 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 85%;
+  }
+}
+
+@keyframes writing-line10 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes writing-line11 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes writing-line12 {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 80%;
+  }
 }
