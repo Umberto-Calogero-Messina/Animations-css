@@ -23,7 +23,7 @@ const getRandomBlueColor = () => {
 
 const CreateLines = () => {
   // Establecer Tiempo animation de las lineas
-  let animationDelay = isFirstWriting ? 3 : 0;
+  const animationDelay = isFirstWriting ? 3 : 0;
 
   // Pintar todas la lineas con clases
   for (let i = 1; i <= 12; i++) {
