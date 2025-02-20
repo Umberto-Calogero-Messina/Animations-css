@@ -36,11 +36,13 @@ const CreateLines = () => {
 
     newDiv.style.position = 'absolute';
     newDiv.style.top = `${50 + (i - 1) * 20}px`;
-    if (isOrange) {
-      newDiv.style.backgroundColor = getRandomOrangeColor();
-    } else {
-      newDiv.style.backgroundColor = getRandomBlueColor();
-    }
+    // if (isOrange) {
+    //   newDiv.style.backgroundColor = getRandomOrangeColor();
+    // } else {
+    //   newDiv.style.backgroundColor = getRandomBlueColor();
+    // }
+
+    newDiv.style.backgroundColor = isOrange ? getRandomOrangeColor() : getRandomBlueColor();
     newDiv.style.width = '100%';
     newDiv.style.height = '10px';
     newDiv.style.width = '0';
